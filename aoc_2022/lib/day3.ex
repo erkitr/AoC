@@ -8,20 +8,23 @@ defmodule Day3 do
 
   def get_compartments(sack) do
     len = String.length(sack)
-    %{'c1' => String.slice(sack, 0..div(len,2)-1), 'c2' => String.slice(sack, div(len,2)..len)}
+    %{
+      'c1' => String.slice(sack, 0..div(len,2)-1),
+      'c2' => String.slice(sack, div(len,2)..len)
+    }
   end
 
   def get_common(%{ 'c1' => c1, 'c2' => c2 }) do
-      List.first(get_common(c1,c2))
+    get_common(c1,c2)
+    |> List.first
   end
 
   def get_common(item1, item2) do
-      MapSet.to_list(
-        MapSet.intersection(
-          MapSet.new(String.to_charlist(item1)),
-          MapSet.new(String.to_charlist(item2))
-        )
+      MapSet.intersection(
+        MapSet.new(String.to_charlist(item1)),
+        MapSet.new(String.to_charlist(item2))
       )
+      |> MapSet.to_list
   end
 
 
@@ -56,7 +59,8 @@ defmodule Day3 do
 
   def get_group_common([s1, s2, s3]) do
     commons = List.to_string(get_common(s1,s2))
-    List.first(get_common(commons,s3))
+    get_common(commons,s3)
+    |> List.first
   end
 
   def get_group_commons() do
