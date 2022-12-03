@@ -1,7 +1,7 @@
 defmodule Day3 do
 
   def get_rucksacks() do
-    Inputs.day3()
+    Inputs.for_day(3)
     |> String.split("\n")
     |> Enum.map(fn x -> String.trim(x) end)
   end

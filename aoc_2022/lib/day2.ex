@@ -66,7 +66,7 @@ defmodule Day2 do
   end
 
   def get_rounds() do
-    Inputs.day2()
+    Inputs.for_day(2)
     |> String.split("\n")
     |> Enum.map(fn x -> get_round_selections(x) end)
   end

@@ -22,7 +22,7 @@ defmodule Day1 do
   end
 
   def get_elves do
-    Inputs.day1()
+    Inputs.for_day(1)
     |> String.split("\n\n")
   end
 
