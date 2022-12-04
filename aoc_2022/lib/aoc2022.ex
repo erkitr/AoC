@@ -3,6 +3,7 @@ defmodule Aoc2022 do
     day1()
     day2()
     day3()
+    day4()
   end
 
   def day1 do
@@ -27,6 +28,14 @@ defmodule Aoc2022 do
     IO.puts("______")
     IO.puts("Part 1: #{Day3.answer1}")
     IO.puts("Part 2: #{Day3.answer2}")
+    IO.puts("------\n")
+  end
+
+  def day4 do
+    IO.puts("Day 4")
+    IO.puts("______")
+    IO.puts("Part 1: #{Day4.answer1}")
+    IO.puts("Part 2: #{Day4.answer2}")
     IO.puts("------\n")
   end
 end
