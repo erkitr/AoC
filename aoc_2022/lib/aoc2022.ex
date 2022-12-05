@@ -38,4 +38,12 @@ defmodule Aoc2022 do
     IO.puts("Part 2: #{Day4.answer2}")
     IO.puts("------\n")
   end
+
+  def day5 do
+    IO.puts("Day 5")
+    IO.puts("______")
+    IO.puts("Part 1: #{Day5.answer1}")
+    IO.puts("Part 2: #{Day5.answer2}")
+    IO.puts("------\n")
+  end
 end
