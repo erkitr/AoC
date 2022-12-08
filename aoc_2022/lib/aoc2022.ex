@@ -6,6 +6,7 @@ defmodule Aoc2022 do
     day4(true)
     day5(true)
     day6(true)
+    day7(true)
   end
 
   def times do
@@ -15,6 +16,7 @@ defmodule Aoc2022 do
     day4(false)
     day5(false)
     day6(false)
+    day7(false)
   end
 
   def print_result(day, part1,  part2, include_answers) do
@@ -68,5 +70,11 @@ defmodule Aoc2022 do
     part1= :timer.tc(fn -> Day6.answer1 end)
     part2 = :timer.tc(fn -> Day6.answer2 end)
     print_result(6, part1, part2, include_answers)
+  end
+
+  def day7(include_answers) do
+    part1= :timer.tc(fn -> Day7.answer1 end)
+    part2 = :timer.tc(fn -> Day7.answer2 end)
+    print_result(7, part1, part2, include_answers)
   end
 end
